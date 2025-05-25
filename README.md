@@ -170,11 +170,6 @@ UnicodeDecodeError: 'charmap' codec can't decode byte
 - **PyTorch Team** - Main machine learning framework
 - **Microsoft WPF Team** - GUI framework
 
-## Contact
-
-- GitHub: [@WanThinnn](https://github.com/WanThinnn)
-- Project Link: [https://github.com/WanThinnn/WAGIC](https://github.com/WanThinnn/WAGIC)
-
 ---
 
 **Star this repository if you find it helpful!**

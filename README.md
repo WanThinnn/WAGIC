@@ -1,6 +1,6 @@
 # WAGIC - WPF for MAGIC
 
-**WAGIC** (Windows Application for Graph Intelligence & Classification) is a WPF-based graphical user interface for interacting with **MAGIC** - Detecting Advanced Persistent Threats via Masked Graph Representation Learning
+**WAGIC** is a WPF-based graphical user interface for interacting with **MAGIC** - Detecting Advanced Persistent Threats via Masked Graph Representation Learning
 <p align="center">
 <img src="./demo/demo_gui-1.png" style="border: 1px solid black;" width="800"/>
 
@@ -156,31 +156,13 @@ UnicodeDecodeError: 'charmap' codec can't decode byte
 ```
 **Solution**: Fixed in backend with encoding='utf-8'
 
-## Upcoming Features
+## Collaborator
 
-- [ ] Dark/Light theme toggle
-- [ ] Real-time training metrics
-- [ ] Model comparison tool
-- [ ] Email notification when completed
-- [ ] Batch processing multiple datasets
-- [ ] Custom visualization options
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Authors
-
-- **WanThinnn** - *Initial work* - [WanThinnn](https://github.com/WanThinnn)
-
+- **Lại Quan Thiên** - [WanThinnn](https://github.com/WanThinnn)
+- **Mai Nguyễn Nam Phương** - [Mai Nguyen Nam Phuong - Cyber Security](https://github.com/namphuong11)
+- **Trần Thế Hữu Phúc** - [tranthehuuphuc](https://github.com/tranthehuuphuc)
+- **Hồ Diệp Huy** - [hohuyy](https://github.com/hohuyy)
+  
 ## Acknowledgments
 
 - **MAGIC Framework** - [MAGIC Repository](https://github.com/WanThinnn/MAGIC)

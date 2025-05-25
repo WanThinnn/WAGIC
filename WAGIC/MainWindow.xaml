@@ -1,12 +1,100 @@
-﻿<Window x:Class="WAGIC.MainWindow"
+﻿<Window x:Class="MagicWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WAGIC"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MAGIC - ML Model Training &amp; Evaluation" Height="700" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Text="🧠 MAGIC - APT Detection Model" 
+                   FontSize="28" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"
+                   Foreground="#2E86AB"/>
+
+        <!-- Dataset Selection -->
+        <GroupBox Grid.Row="1" Header="📊 Dataset Selection" Margin="0,10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Chọn Dataset:" Width="120" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="cmbDatasets" Width="200" Height="30" 
+                              DisplayMemberPath="." SelectedValuePath="." SelectionChanged="cmbDatasets_SelectionChanged"/>
+                    <Button x:Name="btnRefreshDatasets" Content="🔄 Refresh" 
+                            Width="80" Height="30" Margin="10,0,0,0"
+                            Click="BtnRefreshDatasets_Click"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Models đã train:" Width="120" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="cmbModels" Width="200" Height="30" 
+                              DisplayMemberPath="dataset" SelectedValuePath="dataset"/>
+                    <Button x:Name="btnRefreshModels" Content="🔄 Refresh" 
+                            Width="80" Height="30" Margin="10,0,0,0"
+                            Click="BtnRefreshModels_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Training Section -->
+        <GroupBox Grid.Row="2" Header="🎯 Training" Margin="0,10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+                    <Button x:Name="btnStartTraining" Content="🚀 Bắt đầu Training" 
+                            Width="150" Height="35" Margin="5"
+                            Click="BtnStartTraining_Click"/>
+                    <Button x:Name="btnStopTraining" Content="⏹️ Dừng Training" 
+                            Width="150" Height="35" Margin="5" IsEnabled="False"/>
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="txtTrainingStatus" Text="Sẵn sàng training..." 
+                               Margin="0,5" FontWeight="Bold"/>
+                    <ProgressBar x:Name="progressTraining" Height="20" 
+                                 Minimum="0" Maximum="100" Value="0"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Evaluation Section -->
+        <GroupBox Grid.Row="3" Header="📈 Evaluation" Margin="0,10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+                    <Button x:Name="btnStartEvaluation" Content="🔍 Bắt đầu Evaluation" 
+                            Width="140" Height="35" Margin="5"
+                            Click="BtnStartEvaluation_Click"/>
+                    <Button x:Name="btnStopEvaluation" Content="⏹️ Dừng Evaluation" 
+                            Width="140" Height="35" Margin="5" IsEnabled="False"/>
+                    <Button x:Name="btnVisualize" Content="📊 Tạo Biểu đồ" 
+                            Width="120" Height="35" Margin="5"
+                            Click="BtnVisualize_Click"/>
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="txtEvaluationStatus" Text="Sẵn sàng evaluation..." 
+                               Margin="0,5" FontWeight="Bold"/>
+                    <ProgressBar x:Name="progressEvaluation" Height="20" 
+                                 Minimum="0" Maximum="100" Value="0"/>
+                    <TextBlock x:Name="txtEvaluationResult" Text="" 
+                               Margin="0,10" FontSize="16" FontWeight="Bold" 
+                               Foreground="Green"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Log Section -->
+        <GroupBox Grid.Row="4" Header="📋 Activity Log" Margin="0,10">
+            <ScrollViewer>
+                <TextBox x:Name="txtLog" IsReadOnly="True" 
+                         TextWrapping="Wrap" Background="Black" 
+                         Foreground="LimeGreen" FontFamily="Consolas" 
+                         FontSize="11" Padding="10"/>
+            </ScrollViewer>
+        </GroupBox>
     </Grid>
 </Window>

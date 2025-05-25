@@ -1,0 +1,73 @@
+﻿<Window x:Class="WAGIC.result_windows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WAGIC"
+        mc:Ignorable="d"
+        Title="🎯 MAGIC Model Evaluation Results" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#2E86AB" Padding="15">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="📊 MAGIC Model Performance Dashboard" 
+                           FontSize="24" FontWeight="Bold" Foreground="White"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Image Display with Custom Zoom Controls -->
+        <Grid Grid.Row="1">
+            <ScrollViewer x:Name="imageScrollViewer" 
+                          HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto"
+                          CanContentScroll="True">
+                <Image x:Name="imgResult" Stretch="Uniform" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="10" MouseWheel="ImgResult_MouseWheel"/>
+            </ScrollViewer>
+            
+            <!-- Zoom Controls Overlay -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" 
+                        VerticalAlignment="Top" Margin="20" Background="White" 
+                        Opacity="0.8">
+                <Button x:Name="btnZoomIn" Content="🔍+" Width="40" Height="30" 
+                        Click="BtnZoomIn_Click" Margin="2"/>
+                <Button x:Name="btnZoomOut" Content="🔍-" Width="40" Height="30" 
+                        Click="BtnZoomOut_Click" Margin="2"/>
+                <Button x:Name="btnZoomReset" Content="🔄" Width="40" Height="30" 
+                        Click="BtnZoomReset_Click" Margin="2" ToolTip="Reset Zoom"/>
+                <TextBlock x:Name="txtZoomLevel" Text="100%" VerticalAlignment="Center" 
+                           Margin="10,0" FontWeight="Bold"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="2" Background="#F0F0F0" Padding="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="txtStatus" Text="Đang tải kết quả..." 
+                           VerticalAlignment="Center" Margin="0,0,20,0"/>
+                <Button x:Name="btnRefresh" Content="🔄 Refresh" 
+                        Width="80" Height="30" Click="BtnRefresh_Click"/>
+                <Button x:Name="btnSaveAs" Content="💾 Save As..." 
+                        Width="100" Height="30" Margin="10,0" 
+                        Click="BtnSaveAs_Click"/>
+                <Button x:Name="btnFitToWindow" Content="📐 Fit to Window" 
+                        Width="110" Height="30" Margin="10,0" 
+                        Click="BtnFitToWindow_Click"/>
+                <Button x:Name="btnActualSize" Content="📏 Actual Size" 
+                        Width="100" Height="30" Margin="10,0" 
+                        Click="BtnActualSize_Click"/>
+                <Button x:Name="btnClose" Content="❌ Close" 
+                        Width="70" Height="30" Margin="10,0" 
+                        Click="BtnClose_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -2,10 +2,10 @@
 
 **WAGIC** (Windows Application for Graph Intelligence & Classification) is a WPF-based graphical user interface for interacting with **MAGIC** - a machine learning model for detecting APT (Advanced Persistent Threats) in computer systems.
 <p align="center">
-<img src="./demo/demo_gui-1.png" style="border: 1px solid black;" width="600"/>
+<img src="./demo/demo_gui-1.png" style="border: 1px solid black;" width="800"/>
 
 <p align="center">
-<img src="./demo/demo_gui-2.png" style="border: 1px solid black;" width="600"/>
+<img src="./demo/demo_gui-2.png" style="border: 1px solid black;" width="800"/>
 </p>
 
 ## Overview

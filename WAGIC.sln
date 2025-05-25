@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAGIC", "WAGIC\WAGIC.csproj", "{03041299-1DFA-4691-84C1-C6D3FEB3A02E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03041299-1DFA-4691-84C1-C6D3FEB3A02E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03041299-1DFA-4691-84C1-C6D3FEB3A02E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03041299-1DFA-4691-84C1-C6D3FEB3A02E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03041299-1DFA-4691-84C1-C6D3FEB3A02E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20B01422-83CC-47B1-8FC4-9850C4A07156}
+	EndGlobalSection
+EndGlobal

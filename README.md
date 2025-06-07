@@ -1,13 +1,13 @@
 # WAGIC - WPF for MAGIC
 
 **WAGIC** is a WPF-based graphical user interface for interacting with **MAGIC** - Detecting Advanced Persistent Threats via Masked Graph Representation Learning
-<div style="text-align: center;">
-  <img src="./demo/demo_gui-1.png" style="border: 2px solid black; width: 800px;">
-</div>
+<p align="center">
+  <img src="./demo/demo_gui-1.png" width="800" alt="WAGIC Main Interface">
+</p>
 
-<div style="text-align: center; margin-top: 20px;">
-  <img src="./demo/demo_gui-2.png" style="border: 2px solid black; width: 800px;">
-</div>
+<p align="center">
+  <img src="./demo/demo_gui-2.png" width="800" alt="WAGIC Results Window">
+</p>
 
 ## Overview
 

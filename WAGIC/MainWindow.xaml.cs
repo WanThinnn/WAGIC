@@ -468,6 +468,11 @@ namespace MagicWPF
                 LogMessage($"Đã chọn dataset: {selectedDataset}");
             }
         }
+
+        private void btnStopEvaluation_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     // Data Models

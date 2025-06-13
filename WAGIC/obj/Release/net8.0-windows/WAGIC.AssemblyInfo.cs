@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WAGIC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35a805c7580efcf6d112beea53e6b9fb7088af7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf0d1952f2066b3881c0d6d57a1f72b49e849ff3")]
 [assembly: System.Reflection.AssemblyProductAttribute("WAGIC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WAGIC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
